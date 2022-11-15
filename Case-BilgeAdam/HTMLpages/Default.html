@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Bilge Adam</title>
+    <link href="/style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!--responsive site için-->
+
+</head>
+<body>
+
+
+
+    <header>
+
+        <div class="logo">
+
+
+            <a href="Default.html">
+                <img src="../images/BA-logo.PNG" />
+            </a>
+
+        </div>
+        <div class="right-part">
+            <ul class="menulist">
+                <li><a href="ServiceCatalog.html">Hizmet Katalogu </a></li>
+                <!--<li><a href="Customer.html">
+                    <img style="border-radius:50%;" class="avatar" alt="Avatar" id="avatar"/> Gülşah Özakıncı </a></li>-->
+
+                <li> <a href="Customer.html" ><span class="avatarimg"></span><span class="avatartext">Açelya Korkmaz</span></a></li>
+
+
+            </ul>
+
+        </div>
+
+
+    </header>
+
+    <div id="banner" style="background-image:url(../images/arkaplan.jpg);">
+        <div class="search">
+            <b style="color:aliceblue" ;>Size Nasıl Yardımcı Olabiliriz?</b><!--//bold-->
+
+            <form autocomplete="off">
+                <div>
+                    <input type="text"  id="input" placeholder="Lütfen Anahtar Kelime Giriniz. Ör:email problemi" />
+                </div>
+                <ul class="list">
+                </ul>
+            </form>
+            <div class="buttonslist">
+
+                <a href="Request.html"
+                   class="buttons buttonsblue">
+                    <ion-icon name="list-outline"></ion-icon>
+                    İstek Bildir
+                </a>
+                <a class="buttons buttonsgreen" href="Issues.html">
+                    <ion-icon name="newspaper-outline"></ion-icon>
+                    Sorun Bildir
+                </a>
+                <a class="buttons buttonspink" href="AllEntries.html">
+                    <ion-icon name="library-outline"></ion-icon>
+                    Tüm Kayıtlar
+                </a>
+
+
+
+            </div>
+        </div>
+
+
+
+    </div>
+    <div id="announcement">
+
+        <div></div>
+        <div></div>
+        <div></div>
+
+        
+        Bu kısma duyurular gelecek
+    </div>
+       
+    <!--<script>
+
+        function generateAvatar(
+            text,
+            foregroundColor = "black",
+            backgroundColor = "white"
+        ) {
+            const canvas = document.createElement("canvas");
+            const context = canvas.getContext("2d");
+
+            canvas.width = 20;
+            canvas.height = 20;
+
+            // arkaplan çizimi
+            context.fillStyle = backgroundColor;
+            context.fillRect(0, 0, canvas.width, canvas.height);
+
+            // text çizimi
+            context.font = " 1px ";
+            context.fillStyle = foregroundColor;
+            context.textAlign = "center";
+            context.textBaseline = "middle";
+            context.fillText(text, canvas.width / 2, canvas.height / 2);
+
+            return canvas.toDataURL("image/png");
+        }
+
+        document.getElementById("avatar").src = generateAvatar(
+            "GÖ",
+            "white",
+            "#09386e"
+        );
+    </script>-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../JavaScript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script>
+        $(function () {
+          
+            var fullname = $(".avatartext").html();
+            $(".avatarimg").html(fullname.split(' ')[0][0] + fullname.split(' ')[fullname.split(' ').length - 1][0]);
+
+            $("body").click(function () {
+                removeElements();
+              
+            });
+
+        })
+    </script>
+</body>
+</html>
